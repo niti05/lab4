@@ -10,11 +10,10 @@ jobs:
         - name: Checkout Repository
           uses: actions/checkout@v4
 
-        - name: install/set up NodeJS
-          uses: actions/setup-node@4
-          with:
-            node-version: '20.x'
-            registry-url: 'https://npm.pkg.github.com/'
+        -  uses: actions/setup-node@4
+           with:
+              node-version: '20.x'
+              registry-url: 'https://npm.pkg.github.com/'
 
         - name: install the npm dependencies
           run: npm install  
